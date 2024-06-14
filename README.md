@@ -3,7 +3,7 @@
 ## Running in your devices
 ### Firstly, set your own parameters in the */args.py.
 ### Secondly, run */server.py and also */sh.sh.
-![image](https://github.com/XiankeQiang/AdaptiveSplitFederatedLearning/assets/171569751/d3077c26-e1e0-42c5-ac92-2060abf415c0)
+![image](https://github.com/XiankeQiang/AdaptiveSplitFederatedLearning/assets/171569751/62c73876-da82-4f18-97b1-60e5660a2672)
 
 ## Reference codes
 ### The niid setting: https://github.com/lx10077/fedavgpy
