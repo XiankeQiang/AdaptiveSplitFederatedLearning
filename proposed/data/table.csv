@@ -1,0 +1,5 @@
+Vehicle,ip,port,status
+0,192.168.110.16,41162,aggregation
+1,192.168.110.16,41176,aggregation
+2,192.168.110.16,41186,aggregation
+3,192.168.110.16,41194,aggregation

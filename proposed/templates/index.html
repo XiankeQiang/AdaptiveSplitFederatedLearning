@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可视化训练界面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 70%; /* 设置容器宽度为屏幕宽度的 80% */
+            height: 80vh; /* 设置容器高度为屏幕高度的 80% */
+            margin: auto; /* 水平居中显示 */
+            display: flex;
+            flex-direction: column;
+        }
+        .top {
+            display: flex;
+            flex: 1;
+            height: 40vh; /* 设置表格高度为屏幕高度的 50% */
+            padding: 20px;
+            justify-content: space-between;
+            align-items: center; /* 垂直居中显示 */
+        }
+        .left-img, .right-img {
+            width: 50%; /* 图片宽度占据上方空间的 30% */
+            text-align: center; /* 图片水平居中 */
+        }
+        .left-img img, .right-img img {
+            max-width: 90%;
+            height: 35%;/*#auto;*/
+            width: 70%; /* 图片宽度缩小为原来的 80% */
+        }
+        .bottom {
+            flex: 2; /* 表格占据整个页面高度的 40% */
+            height: 60vh; /* 设置表格高度为屏幕高度的 50% */
+            padding: 20px;
+            overflow: auto;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        /* 设置表格的样式 */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        /* 设置表头单元格的样式 */
+        th {
+            padding: 6px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            background-color: #f2f2f2; /* 表头单元格背景颜色为灰色 */
+        }
+
+        /* 设置数据单元格的样式 */
+        td {
+            padding: 6px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>可视化训练界面</h1>
+    <div class="container">
+        <div class="top">
+            <div class="left-img">
+                <div class="card">
+                    <h2>Train Accuracy</h2>
+                    <img id="train_acc" src="" alt="">
+                </div>
+            </div>
+            <div class="right-img">
+                <div class="card">
+                    <h2>Test Accuracy</h2>
+                    <img id="test_acc" src="" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="card">
+                <h2>Table Data</h2>
+                <table id="myTable">
+                    <!-- <thead>
+                        <tr>
+                            <th>Vehicle</th>
+                            <th>ip</th>
+                            <th>port</th>
+                            <th>state</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                      
+                    </tbody> -->
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        function refreshImagesAndTable() {
+            // 获取训练准确率图片
+            var xhttpTrain = new XMLHttpRequest();
+            xhttpTrain.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // 更新训练准确率图片的 src 属性
+                    document.getElementById("train_acc").src = "data:image/png;base64," + this.responseText;
+                }
+            };
+            xhttpTrain.open("GET", "/get_train_acc", true);
+            xhttpTrain.send();
+
+            // 获取测试准确率图片
+            var xhttpTest = new XMLHttpRequest();
+            xhttpTest.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // 更新测试准确率图片的 src 属性
+                    document.getElementById("test_acc").src = "data:image/png;base64," + this.responseText;
+                }
+            };
+            xhttpTest.open("GET", "/get_test_acc", true);
+            xhttpTest.send();
+
+            var xhttpTable = new XMLHttpRequest();
+            xhttpTable.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // 将接收到的 base64 编码的表格数据解码为 HTML 字符串
+                    var tableHtml = atob(this.responseText);
+                    // 创建一个新的 HTML 字符串，包含表头和接收到的内容
+                    console.log(tableHtml)
+                    // var newTableHtml = '<thead><tr><th>Vehicle</th><th>ip</th><th>port</th><th>state</th></tr></thead><tbody>';
+                    // newTableHtml += tableHtml; // 将接收到的内容添加到新的 HTML 字符串中
+                    // newTableHtml += '</tbody>';
+                    // // 更新表格内容
+                    document.getElementById("myTable").innerHTML = tableHtml;
+                }
+            };
+            xhttpTable.open("GET", "/get_table_data", true);
+            xhttpTable.send();
+
+        }
+
+        // 页面加载完成后，立即请求图片和表格数据
+        refreshImagesAndTable();
+
+        // 每隔5秒刷新图片和表格数据
+        setInterval(refreshImagesAndTable, 500);
+    </script>
+</body>
+</html>
