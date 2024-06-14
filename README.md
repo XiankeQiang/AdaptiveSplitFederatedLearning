@@ -7,9 +7,10 @@
 
 ## Reference codes
 ### The niid setting: https://github.com/lx10077/fedavgpy
-### https://github.com/Minki-Kim95/Federated-Learning-and-Split-Learning-with-raspberry-pi
+### The socket setting: https://github.com/Minki-Kim95/Federated-Learning-and-Split-Learning-with-raspberry-pi
 
-For more detail information of SFL in VEC, you can see in this paper. 
+## Reference
+### For more detail information of SFL in VEC, you can see in this paper. 
 ```
 @inproceedings{Qiang2024AdaptiveAP,
   title={Adaptive and Parallel Split Federated Learning in Vehicular Edge Computing},
