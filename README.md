@@ -10,7 +10,7 @@
 ### The socket setting: https://github.com/Minki-Kim95/Federated-Learning-and-Split-Learning-with-raspberry-pi
 
 ## Reference
-### For more detail information of SFL in VEC, you can see in this paper. 
+### For more information of SFL in VEC, you can see in this paper. 
 ```
 @inproceedings{Qiang2024AdaptiveAP,
   title={Adaptive and Parallel Split Federated Learning in Vehicular Edge Computing},
