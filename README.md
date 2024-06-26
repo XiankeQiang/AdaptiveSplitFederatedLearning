@@ -12,6 +12,15 @@
 ## Reference
 ### For more information of SFL in VEC, you can see in this paper. 
 ```
+@misc{qiang2024splitfederatedlearningempowered,
+      title={Split Federated Learning Empowered Vehicular Edge Intelligence: Adaptive Parellel Design and Future Directions}, 
+      author={Xianke Qiang and Zheng Chang and Chaoxiong Ye and Timo Hamalainen},
+      year={2024},
+      eprint={2406.15804},
+      archivePrefix={arXiv},
+      primaryClass={cs.DC}
+      url={https://arxiv.org/abs/2406.15804}, 
+}
 @inproceedings{Qiang2024AdaptiveAP,
   title={Adaptive and Parallel Split Federated Learning in Vehicular Edge Computing},
   author={Xianke Qiang and Zheng Chang and Yun Hu and Lei Liu and Timo Hamalainen},
