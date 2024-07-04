@@ -14,7 +14,7 @@
 ```
 @misc{qiang2024splitfederatedlearningempowered,
       title={Split Federated Learning Empowered Vehicular Edge Intelligence: Adaptive Parellel Design and Future Directions}, 
-      author={Xianke Qiang and Zheng Chang and Chaoxiong Ye and Timo Hamalainen},
+      author={Xianke Qiang and Zheng Chang and Chaoxiong Ye and Timo Hamalainen and Geyong Min},
       year={2024},
       eprint={2406.15804},
       archivePrefix={arXiv},
