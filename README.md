@@ -12,19 +12,26 @@
 ## Reference
 ### For more information of SFL in VEC, you can see in this paper. 
 ```
-@misc{qiang2024splitfederatedlearningempowered,
-      title={Split Federated Learning Empowered Vehicular Edge Intelligence: Adaptive Parellel Design and Future Directions}, 
-      author={Xianke Qiang and Zheng Chang and Chaoxiong Ye and Timo Hamalainen and Geyong Min},
-      year={2024},
-      eprint={2406.15804},
-      archivePrefix={arXiv},
-      primaryClass={cs.DC}
-      url={https://arxiv.org/abs/2406.15804}, 
-}
-@inproceedings{Qiang2024AdaptiveAP,
-  title={Adaptive and Parallel Split Federated Learning in Vehicular Edge Computing},
-  author={Xianke Qiang and Zheng Chang and Yun Hu and Lei Liu and Timo Hamalainen},
-  year={2024},
-  url={https://api.semanticscholar.org/CorpusID:270095175}
-}
+@ARTICLE{10839234,
+  author={Qiang, Xianke and Chang, Zheng and Ye, Chaoxiong and Hamalainen, Timo and Min, Geyong},
+  journal={IEEE Wireless Communications}, 
+  title={Split Federated Learning Empowered Vehicular Edge Intelligence: Concept, Adaptive Design, and Future Directions}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-8},
+  keywords={Data models;Training;Computational modeling;Artificial intelligence;Data privacy;Federated learning;Distributed databases;Load modeling;Adaptation models;Privacy},
+  doi={10.1109/MWC.009.2400219}}
+
+@ARTICLE{10714368,
+  author={Qiang, Xianke and Chang, Zheng and Hu, Yun and Liu, Lei and Hämäläinen, Timo},
+  journal={IEEE Internet of Things Journal}, 
+  title={Adaptive and Parallel Split Federated Learning in Vehicular Edge Computing}, 
+  year={2025},
+  volume={12},
+  number={5},
+  pages={4591-4604},
+  keywords={Training;Adaptation models;Federated learning;Computational modeling;Resource management;Data models;Vehicle dynamics;Edge computing;Internet of Things;Heuristic algorithms;Adaptive split model;federated learning (FL);split FL;split learning (SL);vehicular edge intelligence (VEI)},
+  doi={10.1109/JIOT.2024.3479158}}
+
 ```
